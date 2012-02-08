@@ -1,5 +1,23 @@
 #!/usr/bin/env php
 <?php
+
+/** Adds all dependencies to the include path. */
+set_include_path(implode(PATH_SEPARATOR, array(
+    realpath(dirname(__FILE__)),
+    realpath(dirname(__FILE__) . '/libs/dbunit'),
+    realpath(dirname(__FILE__) . '/libs/php-code-coverage'),
+    realpath(dirname(__FILE__) . '/libs/php-file-iterator'),
+    realpath(dirname(__FILE__) . '/libs/php-text-template'),
+    realpath(dirname(__FILE__) . '/libs/php-timer'),
+    realpath(dirname(__FILE__) . '/libs/php-token-stream'),
+    realpath(dirname(__FILE__) . '/libs/phpunit'),
+    realpath(dirname(__FILE__) . '/libs/phpunit-mock-objects'),
+    realpath(dirname(__FILE__) . '/libs/phpunit-selenium'),
+    realpath(dirname(__FILE__) . '/libs/phpunit-story'),
+    realpath(dirname(__FILE__) . '/libs/php-invoker'),
+    get_include_path(),
+)));
+
 /* PHPUnit
  *
  * Copyright (c) 2001-2012, Sebastian Bergmann <sebastian@phpunit.de>.
